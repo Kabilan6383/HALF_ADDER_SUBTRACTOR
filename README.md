@@ -1,5 +1,6 @@
-# DATE:15.11.2024
 # EXP-3:HALF_ADDER_SUBTRACTOR
+
+# DATE:15.11.2024
 
 Implementation-of-Half-Adder-and-Half Subtractor-circuit
 
