@@ -55,8 +55,6 @@ Figure -02 HALF Subtractor
 
 ```
 
-Developed by:PREETHI A K
-RegisterNumber:212223230156
 
 module EXP3(a,b,sum,carry,D,Bo);
 input a,b;
