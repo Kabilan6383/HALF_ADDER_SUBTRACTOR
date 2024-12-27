@@ -1,4 +1,5 @@
-# HALF_ADDER_SUBTRACTOR
+# DATE:15.11.2024
+# EXP-3:HALF_ADDER_SUBTRACTOR
 
 Implementation-of-Half-Adder-and-Half Subtractor-circuit
 
@@ -17,8 +18,8 @@ Software – Quartus prime Theory Adders are digital circuits that carry out the
 Half adder is a combinational circuit that performs simple addition of two binary numbers. The input variables designate the augend and addend bits; the output variables produce the sum and carry. It is necessary to specify two output variables because the result may consist of two binary digits.
 
 Sum = A’B+AB’ =A ⊕ B Carry = AB
+![Screenshot 2024-12-27 111606](https://github.com/user-attachments/assets/63a8ba59-d816-478d-a867-54b5bf61087b)
 
-![image](https://github.com/naavaneetha/HALF_ADDER_SUBTRACTOR/assets/154305477/bd4a0b2c-cdbc-4184-ab08-81578f121e1f)
 
 Figure -01 HALF ADDER
 
@@ -28,8 +29,8 @@ The half-subtractor is a combinational circuit which is used to perform subtract
 
 Diff = A’B+AB’ =A ⊕ B
 Borrow = A’B
+![Screenshot 2024-12-27 111619](https://github.com/user-attachments/assets/e41e4f01-d80b-46e8-9d59-e4d5062cd84e)
 
- ![image](https://github.com/naavaneetha/HALF_ADDER_SUBTRACTOR/assets/154305477/d76b099c-513f-4e7c-843a-e2fd028a531a)
 
 Figure -02 HALF Subtractor
 
@@ -49,28 +50,39 @@ Figure -02 HALF Subtractor
 
 
 **Program:**
-modue halfaddsub(a,b,c,d,sum,carry,borrow);
-input a,b,c,d;
-output sum,carry,diff,borrow;
-assign sum=a^b;
-assign carry=a&b;
-assign diff=c^d;
-assign borrow=~c&d;
+
+ Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
+
+```
+
+Developed by:PREETHI A K
+RegisterNumber:212223230156
+
+module EXP3(a,b,sum,carry,D,Bo);
+input a,b;
+output sum,carry,D,Bo; 
+xor(sum,a,b);
+and(carry,a,b);
+wire abar;
+not(abar,a);
+xor(D,a,b);
+and(Bo,abar,b);
 endmodule
+```
 
 
-
-/* Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
-
-Developed by: RegisterNumber:*/24900859 P.KABILAN
+Developed by:P.KABILAN
+ RegisterNumber:24900859
 
 **RTL Schematic**
-![WhatsApp Image 2024-12-05 at 18 58 10_29ae93a6](https://github.com/user-attachments/assets/b1051fa6-276f-486a-b474-4b5a1c811948)
+![Screenshot 2024-12-27 111630](https://github.com/user-attachments/assets/93be6dce-c7b1-4df4-94c4-7953a3974980)
+
 
 
 **Output/TIMING Waveform**
-![WhatsApp Image 2024-12-05 at 18 58 10_b6dce46f](https://github.com/user-attachments/assets/3f05a76b-873c-4b28-80c3-373363442a8f)
+![Screenshot 2024-12-27 111639](https://github.com/user-attachments/assets/faac4f00-9baf-4243-bfd0-2f3243755958)
+
 
 
 **Result:**
-Thus the half adder and half subtractor experiment is verified.
+Thus the output is verified.
